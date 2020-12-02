@@ -20,7 +20,7 @@ class CreateOrdersDetailsTable extends Migration
             $table->string('resto_name');
             $table->string('menu_name');
             $table->decimal('price', 8, 2);
-            $table->dateTime('date_order', 0);
+            $table->dateTime('date_order', 0)->useCurrent = true;
             $table->timestamps();
         });
     }

@@ -38,5 +38,6 @@ Route::group(['prefix' => 'v1'], function(){
     Route::get('restaurants/search-dishes', [SysRestoController::class, 'getSearchData']);
     Route::get('orders/customers-total', [SysOrderController::class, 'totalUsersOrder']);
 
-
+    // POST DATA
+    Route::post('orders', [SysOrderController::class, 'storeOrders']);
 });
